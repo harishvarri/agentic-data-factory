@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,44 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				brand: {
+					blue: {
+						50: '#E6F8FF',
+						100: '#CCF1FF',
+						200: '#99E3FF',
+						300: '#66D5FF',
+						400: '#33C7FF',
+						500: '#00B9FF',
+						600: '#0094CC',
+						700: '#006F99',
+						800: '#004A66',
+						900: '#002533',
+					},
+					teal: {
+						50: '#E6FFFD',
+						100: '#CCFFFB',
+						200: '#99FFF7',
+						300: '#66FFF3',
+						400: '#33FFEF',
+						500: '#00FFEB',
+						600: '#00CCBC',
+						700: '#00998D',
+						800: '#00665E',
+						900: '#00332F',
+					},
+					orange: {
+						50: '#FFF3E6',
+						100: '#FFE7CC',
+						200: '#FFCF99',
+						300: '#FFB766',
+						400: '#FF9F33',
+						500: '#FF8700',
+						600: '#CC6C00',
+						700: '#995100',
+						800: '#663600',
+						900: '#331B00',
+					},
 				}
 			},
 			borderRadius: {
@@ -84,11 +123,23 @@ export default {
 					to: {
 						height: '0'
 					}
-				}
+				},
+				'pulse-slow': {
+					'0%, 100%': { opacity: 1 },
+					'50%': { opacity: 0.5 }
+				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pulse-slow': 'pulse-slow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite'
+			},
+			fontFamily: {
+				sans: ['Inter', 'sans-serif'],
+			},
+			backgroundImage: {
+				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+				'grid-pattern': 'linear-gradient(to right, #f0f0f0 1px, transparent 1px), linear-gradient(to bottom, #f0f0f0 1px, transparent 1px)',
 			}
 		}
 	},
